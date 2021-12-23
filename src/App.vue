@@ -3,34 +3,18 @@
   <img alt="Vue logo" src="./assets/logo.png">
  <!-- <HelloWorld msg="Welc ome to Your Vue.js App"/> -->
   <h2>my friends</h2>
-  
-</section>
-<!-- <li>
-
-
-    <h2>{{ friend.name }} </h2>
-    <button @click="toggledetails">{‌{ detailsAreVisible ? 'Hide' :'Show' }} details</button>
-    <ul v-if="detailsAreVisible">
-        <li>
-            <strong>phone:</strong>
-            {{ friend.phone }}
-            </li>
-        <li>
-            <strong>email:</strong>
-            {{ friend.email }}
-        </li>
-        
-    </ul>
-</li>-->
+  </section>
 <friend-contact
  name="priyanka saha"
  phone-number="89652347"
  email-address="sahae455@gmail.com"
+ is-favourite = "1"
 ></friend-contact> 
 <friend-contact
  name="adelina gomez"
  phone-number="64568522"
  email-address="adelina gomez@gmail.com"
+ is-favourite = "0"
 ></friend-contact> 
 </template>
 
@@ -59,11 +43,7 @@ export default {
 
         };
     },
-// methods :{
-//               toggledetails(){
-//                   this.detailsAreVisible = !this.detailsAreVisible ;
-//               }
-//       }
+
 }
 </script>
 
