@@ -1,16 +1,69 @@
 <template>
+<section>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <!-- <HelloWorld msg="Welc ome to Your Vue.js App"/> -->
+  <h2>my friends</h2>
+  
+</section>
+<!-- <li>
+
+
+    <h2>{{ friend.name }} </h2>
+    <button @click="toggledetails">{‌{ detailsAreVisible ? 'Hide' :'Show' }} details</button>
+    <ul v-if="detailsAreVisible">
+        <li>
+            <strong>phone:</strong>
+            {{ friend.phone }}
+            </li>
+        <li>
+            <strong>email:</strong>
+            {{ friend.email }}
+        </li>
+        
+    </ul>
+</li>-->
+<friend-contact
+ name="priyanka saha"
+ phone-number="89652347"
+ email-address="sahae455@gmail.com"
+></friend-contact> 
+<friend-contact
+ name="adelina gomez"
+ phone-number="64568522"
+ email-address="adelina gomez@gmail.com"
+></friend-contact> 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+   data(){
+        return{
+           
+            friends : [
+              {
+                  id : 'manual',
+                  name : 'priyanka saha',
+                  phone: '89652347',
+                  email : 'sahae455@gmail.com'
+              },
+               {
+                  id : 'manual',
+                  name : 'adelina gomez',
+                  phone: '64568522',
+                  email : 'adelina gomez@gmail.com'
+              },
+               
+            ]
+
+        };
+    },
+// methods :{
+//               toggledetails(){
+//                   this.detailsAreVisible = !this.detailsAreVisible ;
+//               }
+//       }
 }
 </script>
 
