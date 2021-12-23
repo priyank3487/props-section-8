@@ -5,17 +5,19 @@
   <h2>my friends</h2>
   </section>
 <friend-contact
- name="priyanka saha"
- phone-number="89652347"
- email-address="sahae455@gmail.com"
- is-favourite = "1"
+v-for ="friend in friends"
+:key="friend.id"
+ :name="friend.name"
+ :phone-number="friend.phone"
+ :email-address="friend.address"
+ :is-favourite="true"
 ></friend-contact> 
-<friend-contact
+<!-- <friend-contact
  name="adelina gomez"
  phone-number="64568522"
  email-address="adelina gomez@gmail.com"
  is-favourite = "0"
-></friend-contact> 
+></friend-contact>  -->
 </template>
 
 <script>
